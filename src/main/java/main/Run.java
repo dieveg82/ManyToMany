@@ -53,15 +53,20 @@ public class Run implements CommandLineRunner{
 		
 		
 		comp = competizioneService.getById(1L);
-		System.out.println(comp.getListUtenti());
+		int eta= 0;
+		int counter =0;
+		for (Utente element : comp.getListUtenti()) {
+			if (element.getGenere().equals(Genere.M)) {
+				eta += LocalDate.now().getYear() - element.getDataDiNascita().getYear();
+			}
+			counter ++;
+		}
+		System.out.println(eta/counter);
 		
 		
 		
 	
 		
-		
-//		System.out.println(utente);
-//		utenteService.save(utente);
 		
 		
 		
