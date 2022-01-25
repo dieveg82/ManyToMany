@@ -58,8 +58,9 @@ public class Run implements CommandLineRunner{
 		for (Utente element : comp.getListUtenti()) {
 			if (element.getGenere().equals(Genere.M)) {
 				eta += LocalDate.now().getYear() - element.getDataDiNascita().getYear();
+				counter ++;
 			}
-			counter ++;
+			
 		}
 		System.out.println(eta/counter);
 		
