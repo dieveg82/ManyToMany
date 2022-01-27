@@ -1,22 +1,22 @@
-package main;
+package dieveg.demo;
 
 import java.time.LocalDate;
 
+import dieveg.demo.service.UtenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import main.model.Competizione;
-import main.model.Genere;
-import main.model.Utente;
-import main.service.CompetizioneService;
-import main.service.UtenteService;
+import dieveg.demo.model.Competizione;
+import dieveg.demo.model.Genere;
+import dieveg.demo.model.Utente;
+import dieveg.demo.service.CompetizioneService;
 
 @Component
 public class Run implements CommandLineRunner{
 
 	@Autowired
-	UtenteService utenteService;
+    UtenteService utenteService;
 	
 	@Autowired 
 	CompetizioneService competizioneService;

@@ -1,43 +1,43 @@
-package main.service;
+package dieveg.demo.service;
 
-import java.awt.print.Book;
 import java.util.Optional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
+import dieveg.demo.repository.CompetizioneRepository;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import main.model.Utente;
-import main.repository.UtenteRepository;
+import dieveg.demo.model.Competizione;
 
 @Service
-public class UtenteService {
+public class CompetizioneService {
 
 	
 	@Autowired
-	UtenteRepository utenteRepository;
+    CompetizioneRepository competizioneRepository;
 	
 	@PersistenceContext
 	private EntityManager entityManager;
 	
-	public void save (Utente utente) {
+	
+	public void save (Competizione competizione) {
 		
-		utenteRepository.save(utente);
+		competizioneRepository.save(competizione);
 	}
 	
-
+	
 	@Transactional
-	public Utente getById (Long utenteId) {
+	public Competizione getById (Long utenteId) {
 		
-		Optional<Utente> utenteResponse = utenteRepository.findById(utenteId);
-		Utente utente = utenteResponse.get();
+		Optional<Competizione> utenteResponse = competizioneRepository.findById(utenteId);
+		Competizione utente = utenteResponse.get();
 		Session sessin = (Session)entityManager.unwrap(Session.class);
 		sessin.close ();
 		return utente;
 	}
-
+	
 }

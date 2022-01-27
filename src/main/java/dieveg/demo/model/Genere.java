@@ -1,4 +1,4 @@
-package main.model;
+package dieveg.demo.model;
 
 public enum Genere {
 
