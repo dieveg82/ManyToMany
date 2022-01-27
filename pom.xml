@@ -12,7 +12,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>Prova</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.4-SNAPSHOT</version>
 	<name>Many To Many App</name>
 	<description>Demo project for Spring Boot</description>
 
