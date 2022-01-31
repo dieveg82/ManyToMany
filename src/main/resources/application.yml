@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+
+  application:
+    name: ManyToManyApp
+    version: 0.0.1-SNAPSHOT
+
+  jpa:
+    hibernate.ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        default_schema: public
+        format_sql: true
+        enable_lazy_load_no_trans: true
+
